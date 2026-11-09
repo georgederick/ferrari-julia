@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Boa noite, campeã</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700;1,800&family=Caveat:wght@500;700&family=Barlow:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="stars" aria-hidden="true"></canvas>
+
+<div id="intro" role="button" tabindex="0" aria-label="Pular abertura">
+  <div class="gantry" aria-hidden="true">
+    <div class="lt"><i></i><i></i></div><div class="lt"><i></i><i></i></div><div class="lt"><i></i><i></i></div><div class="lt"><i></i><i></i></div><div class="lt"><i></i><i></i></div>
+  </div>
+  <div id="introTxt">Preparada?</div>
+  <div class="hint">toque para pular</div>
+</div>
+
+<div class="moon" aria-hidden="true"></div>
+<main>
+  <header class="hero">
+    <img class="crest" src="img/ferrari.png" alt="Escudo da Ferrari">
+    <h1>Boa noite,<span id="nome">campeã</span></h1>
+    <p class="sub">A corrida de hoje acabou. Hora de ir pro box.</p>
+  </header>
+
+  <section>
+    <h2>Uma cartinha pra você</h2>
+    <button class="env" id="env" aria-expanded="false" aria-controls="letter">
+      <span class="back"></span><span class="paper">Para você</span><span class="front"></span><span class="flap"></span>
+      <span class="seal"><img src="img/ferrari.png" alt=""></span>
+    </button>
+    <p class="hintb" id="envHint">toque no envelope para abrir</p>
+    <div class="letter" id="letter" aria-live="polite">
+      <p>Oi, <span class="n">campeã</span>!</p>
+      <p>Hoje você deu todas as voltas que precisava. Algumas foram rápidas, outras com bandeira amarela, e tudo bem: até os melhores pilotos têm dia de pneu gasto.</p>
+      <p>Agora é hora do pit stop mais importante da temporada: trocar os pneus, abastecer de sonhos e descansar o motor.</p>
+      <p>Amanhã tem largada nova, e eu tenho certeza de que você sai da pole. Mas hoje a prioridade é dormir bem e sonhar com o pódio.</p>
+      <p>Tenha uma noite tranquila. Forza, sempre!</p>
+      <p class="sig">Boa noite, e bons sonhos. 🏁</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Contar ovelhinhas? Melhor contar voltas</h2>
+    <svg class="track" viewBox="0 0 320 150" aria-hidden="true">
+      <path id="trk" d="M60 120 H220 C270 120 295 100 285 70 C278 48 250 40 225 48 C200 56 190 30 160 22 C120 12 70 20 45 45 C20 70 25 120 60 120 Z" fill="none" stroke="#2c3350" stroke-width="22" stroke-linecap="round"/>
+      <path d="M60 120 H220 C270 120 295 100 285 70 C278 48 250 40 225 48 C200 56 190 30 160 22 C120 12 70 20 45 45 C20 70 25 120 60 120 Z" fill="none" stroke="#e8e8ee" stroke-width="1.5" stroke-dasharray="6 7"/>
+      <rect x="118" y="108" width="6" height="24" fill="#fff"/>
+      <circle id="car" r="9" fill="#e10600" stroke="#ffed00" stroke-width="3"/>
+    </svg>
+    <div class="laps"><span id="lapn">0</span> / 5 voltas</div>
+    <p id="lapmsg">Cada volta é um pensamento bom que fica pra trás.</p>
+    <button class="btn" id="lapbtn">Dar uma volta</button>
+    <div class="flag" id="flag" style="margin-top:18px"></div>
+  </section>
+
+  <section>
+    <h2>Rádio da equipe</h2>
+    <div class="radio" id="radio"><small>RÁDIO · BOX</small><span id="radiotxt">Toque no botão para ouvir a mensagem da equipe.</span></div>
+    <button class="btn" id="radiobtn">Ouvir o rádio</button>
+  </section>
+
+  <footer>
+    <div class="logos">
+      <span class="badge"><img src="img/f1.png" alt="Logo da Fórmula 1"></span>
+      <span class="badge"><img src="img/fia.png" alt="Logo da FIA"></span>
+    </div>
+    <span>Feito com carinho, pra uma fã de verdade.</span>
+  </footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
